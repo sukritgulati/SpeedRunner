@@ -12,6 +12,9 @@
 		F48A12CE1E961F810025E788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A12CC1E961F810025E788 /* Main.storyboard */; };
 		F48A12D01E961F810025E788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48A12CF1E961F810025E788 /* Assets.xcassets */; };
 		F48A12D31E961F810025E788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A12D11E961F810025E788 /* LaunchScreen.storyboard */; };
+		F48A12DC1E9626380025E788 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A12DB1E9626380025E788 /* Song.swift */; };
+		F48A12E31E963DA50025E788 /* libSuperpoweredAudioIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F48A12E21E963DA50025E788 /* libSuperpoweredAudioIOS.a */; };
+		F48A12E71E963DB80025E788 /* BPMDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = F48A12E61E963DB80025E788 /* BPMDetector.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,16 @@
 		F48A12CF1E961F810025E788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F48A12D21E961F810025E788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48A12D41E961F810025E788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48A12DB1E9626380025E788 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F48A12DE1E963D970025E788 /* SuperpoweredAnalyzer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredAnalyzer.h; sourceTree = "<group>"; };
+		F48A12DF1E963D970025E788 /* SuperpoweredAudioBuffers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredAudioBuffers.h; sourceTree = "<group>"; };
+		F48A12E01E963D970025E788 /* SuperpoweredSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredSimple.h; sourceTree = "<group>"; };
+		F48A12E11E963D970025E788 /* SuperpoweredDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperpoweredDecoder.h; sourceTree = "<group>"; };
+		F48A12E21E963DA50025E788 /* libSuperpoweredAudioIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSuperpoweredAudioIOS.a; sourceTree = "<group>"; };
+		F48A12E41E963DB70025E788 /* SpeedRunner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeedRunner-Bridging-Header.h"; sourceTree = "<group>"; };
+		F48A12E51E963DB80025E788 /* BPMDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPMDetector.h; sourceTree = "<group>"; };
+		F48A12E61E963DB80025E788 /* BPMDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BPMDetector.mm; sourceTree = "<group>"; };
+		F48A12E81E9661FB0025E788 /* track_Who_Do_You_Think_You_Are_Spice_Girls.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = track_Who_Do_You_Think_You_Are_Spice_Girls.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48A12E31E963DA50025E788 /* libSuperpoweredAudioIOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +68,8 @@
 		F48A12C71E961F810025E788 /* SpeedRunner */ = {
 			isa = PBXGroup;
 			children = (
+				F48A12DD1E963D6E0025E788 /* Superpowered */,
+				F48A12DA1E96260F0025E788 /* Model */,
 				F48A12C81E961F810025E788 /* AppDelegate.swift */,
 				F48A12CA1E961F810025E788 /* ViewController.swift */,
 				F48A12CC1E961F810025E788 /* Main.storyboard */,
@@ -62,6 +78,30 @@
 				F48A12D41E961F810025E788 /* Info.plist */,
 			);
 			path = SpeedRunner;
+			sourceTree = "<group>";
+		};
+		F48A12DA1E96260F0025E788 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F48A12DB1E9626380025E788 /* Song.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F48A12DD1E963D6E0025E788 /* Superpowered */ = {
+			isa = PBXGroup;
+			children = (
+				F48A12E51E963DB80025E788 /* BPMDetector.h */,
+				F48A12E61E963DB80025E788 /* BPMDetector.mm */,
+				F48A12E21E963DA50025E788 /* libSuperpoweredAudioIOS.a */,
+				F48A12DE1E963D970025E788 /* SuperpoweredAnalyzer.h */,
+				F48A12DF1E963D970025E788 /* SuperpoweredAudioBuffers.h */,
+				F48A12E01E963D970025E788 /* SuperpoweredSimple.h */,
+				F48A12E11E963D970025E788 /* SuperpoweredDecoder.h */,
+				F48A12E41E963DB70025E788 /* SpeedRunner-Bridging-Header.h */,
+				F48A12E81E9661FB0025E788 /* track_Who_Do_You_Think_You_Are_Spice_Girls.m4a */,
+			);
+			name = Superpowered;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +137,7 @@
 					F48A12C41E961F810025E788 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3YJRVWQQLZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48A12DC1E9626380025E788 /* Song.swift in Sources */,
 				F48A12CB1E961F810025E788 /* ViewController.swift in Sources */,
 				F48A12C91E961F810025E788 /* AppDelegate.swift in Sources */,
+				F48A12E71E963DB80025E788 /* BPMDetector.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +304,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3YJRVWQQLZ;
 				INFOPLIST_FILE = SpeedRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpeedRunner",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gulati.SpeedRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpeedRunner/SpeedRunner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +325,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3YJRVWQQLZ;
 				INFOPLIST_FILE = SpeedRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpeedRunner",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gulati.SpeedRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpeedRunner/SpeedRunner-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +360,7 @@
 				F48A12D91E961F810025E788 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
